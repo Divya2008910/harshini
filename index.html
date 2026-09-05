@@ -1,0 +1,2794 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Our Alagii ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#08030d;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,72,144,.18),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(143,70,255,.16),transparent 30%);
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+#stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.6;
+    animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.15;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* =========================
+   PASSWORD SCREEN
+========================= */
+
+#lockScreen{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    radial-gradient(circle at center,#3a142e,#07020c 70%);
+
+    z-index:9999;
+
+    transition:1.2s ease;
+}
+
+.lockBox{
+    width:90%;
+    max-width:650px;
+}
+
+.lockEmoji{
+    font-size:55px;
+    margin-bottom:20px;
+
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.lockSmall{
+
+    font-size:12px;
+    letter-spacing:4px;
+
+    color:#ff9bc3;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.lockTitle{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:clamp(55px,10vw,95px);
+
+    font-weight:400;
+
+    text-shadow:
+    0 0 15px #ff5a9c,
+    0 0 40px #ff176f;
+}
+
+.lockText{
+
+    color:#bbb;
+
+    margin:20px auto;
+
+    line-height:1.8;
+
+    max-width:500px;
+}
+
+.passwordBox{
+
+    display:flex;
+
+    max-width:450px;
+
+    margin:30px auto 10px;
+
+    gap:10px;
+}
+
+#password{
+
+    flex:1;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    outline:none;
+
+    font-family:'Poppins';
+}
+
+#password::placeholder{
+    color:#888;
+}
+
+.unlockBtn{
+
+    border:none;
+
+    background:#ff4f91;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.unlockBtn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 30px #ff4f91;
+}
+
+#error{
+
+    color:#ff6b9e;
+
+    font-size:13px;
+
+    min-height:20px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:100px 7%;
+    position:relative;
+}
+
+.sectionTitle{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.sectionTitle .small{
+
+    color:#ff80b1;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+}
+
+.sectionTitle h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:clamp(48px,8vw,85px);
+
+    font-weight:400;
+
+    margin:8px 0;
+}
+
+.sectionTitle p{
+
+    color:#aaa;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.heroContent{
+
+    max-width:900px;
+}
+
+.heroMini{
+
+    color:#ff9bc1;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:clamp(75px,14vw,160px);
+
+    font-weight:400;
+
+    margin:15px 0;
+
+    background:
+    linear-gradient(
+    90deg,
+    #fff,
+    #ff8eb9,
+    #fff
+    );
+
+    background-size:200%;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:shine 4s infinite;
+}
+
+@keyframes shine{
+
+    0%{
+        background-position:0%;
+    }
+
+    50%{
+        background-position:100%;
+    }
+
+    100%{
+        background-position:0%;
+    }
+}
+
+.heroSubtitle{
+
+    color:#ccc;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+.scrollText{
+
+    margin-top:60px;
+
+    color:#777;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+}
+
+/* =========================
+   SECRET INTRO MESSAGE
+========================= */
+
+.secretMessage{
+
+    max-width:800px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-family:'Caveat',cursive;
+
+    font-size:30px;
+
+    line-height:1.6;
+
+    color:#ddd;
+}
+
+/* =========================
+   MAIN PHOTO
+========================= */
+
+.mainPhoto{
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.photoFrame{
+
+    width:min(390px,90vw);
+
+    padding:12px;
+
+    background:
+    linear-gradient(
+    145deg,
+    #ff7eaa,
+    #fff,
+    #9f6aff
+    );
+
+    border-radius:25px;
+
+    transform:rotate(-2deg);
+
+    box-shadow:
+    0 30px 90px rgba(255,50,140,.3);
+}
+
+.photoFrame img{
+
+    width:100%;
+
+    height:480px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:18px;
+}
+
+/* =========================
+   ROOMMATE SECTION
+========================= */
+
+.roommate{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:50px 35px;
+
+    backdrop-filter:blur(15px);
+}
+
+.roommate h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    font-weight:400;
+
+    color:#ff91ba;
+
+    margin-bottom:20px;
+}
+
+.roommate p{
+
+    color:#bbb;
+
+    line-height:2;
+
+    font-size:15px;
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+.gallery{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    columns:3 250px;
+
+    column-gap:20px;
+}
+
+.memory{
+
+    break-inside:avoid;
+
+    margin-bottom:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    background:#151019;
+}
+
+.memory img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.7s;
+}
+
+.memory:hover img{
+
+    transform:scale(1.08);
+
+    filter:brightness(.6);
+}
+
+.memoryCaption{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    padding:35px 20px 20px;
+
+    background:
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,.95)
+    );
+
+    transform:translateY(100%);
+
+    transition:.4s;
+}
+
+.memory:hover .memoryCaption{
+
+    transform:translateY(0);
+}
+
+.memoryCaption h4{
+
+    font-family:'Caveat',cursive;
+
+    font-size:24px;
+
+    font-weight:500;
+}
+
+.memoryCaption p{
+
+    font-size:11px;
+
+    color:#bbb;
+
+    margin-top:4px;
+}
+
+/* =========================
+   SONG SECTION
+========================= */
+
+.musicSection{
+
+    background:
+    rgba(255,255,255,.025);
+}
+
+.musicBox{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:30px;
+}
+
+.song{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 5px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+}
+
+.song:last-child{
+    border-bottom:none;
+}
+
+.songNumber{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,90,150,.12);
+
+    color:#ff8bb7;
+
+    flex-shrink:0;
+}
+
+.songInfo{
+
+    flex:1;
+}
+
+.songInfo h4{
+    font-size:15px;
+}
+
+.songInfo p{
+
+    font-size:12px;
+
+    color:#888;
+
+    margin-top:5px;
+}
+
+.playBtn{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff4f91;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.playBtn:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:
+    0 0 25px #ff4f91;
+}
+
+.nowPlaying{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#ff91ba;
+
+    font-size:12px;
+
+    min-height:20px;
+}
+
+/* =========================
+   THINGS WE LOVE
+========================= */
+
+.reasons{
+
+    max-width:1050px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.reason{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+}
+
+.reason:hover{
+
+    transform:translateY(-10px);
+
+    background:
+    rgba(255,76,145,.08);
+}
+
+.reasonIcon{
+
+    font-size:38px;
+}
+
+.reason h3{
+
+    margin:15px 0 10px;
+}
+
+.reason p{
+
+    color:#999;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    bottom:0;
+
+    width:1px;
+
+    background:
+    linear-gradient(
+    transparent,
+    #ff609d,
+    transparent
+    );
+}
+
+.timelineItem{
+
+    width:50%;
+
+    padding:20px 40px;
+
+    position:relative;
+}
+
+.timelineItem:nth-child(even){
+
+    margin-left:50%;
+}
+
+.timelineItem:nth-child(odd){
+
+    text-align:right;
+}
+
+.timelineDot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#ff5a9c;
+
+    box-shadow:
+    0 0 20px #ff5a9c;
+
+    position:absolute;
+
+    top:32px;
+}
+
+.timelineItem:nth-child(odd)
+.timelineDot{
+
+    right:-6px;
+}
+
+.timelineItem:nth-child(even)
+.timelineDot{
+
+    left:-6px;
+}
+
+.timelineCard{
+
+    padding:25px;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.timelineCard h3{
+
+    color:#ff8bb6;
+
+    margin-bottom:8px;
+}
+
+.timelineCard p{
+
+    color:#999;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letterWrap{
+
+    max-width:850px;
+
+    margin:auto;
+}
+
+.letter{
+
+    color:#321728;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.98),
+    rgba(255,246,250,.98)
+    );
+
+    padding:60px;
+
+    border-radius:6px;
+
+    position:relative;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.4);
+}
+
+.letter::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:
+    1px solid #dba1bb;
+}
+
+.letter h3{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#b62c67;
+
+    font-weight:400;
+}
+
+.letter p{
+
+    font-family:'Caveat',cursive;
+
+    font-size:25px;
+
+    line-height:1.6;
+
+    margin-top:20px;
+}
+
+/* =========================
+   FINAL SURPRISE
+========================= */
+
+.finalSection{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.finalContent{
+
+    max-width:850px;
+}
+
+.finalSmall{
+
+    letter-spacing:5px;
+
+    color:#ff8ab6;
+
+    font-size:11px;
+}
+
+.finalContent h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:
+    clamp(55px,10vw,110px);
+
+    font-weight:400;
+
+    margin:20px 0;
+}
+
+.finalText{
+
+    font-family:'Caveat',cursive;
+
+    font-size:29px;
+
+    line-height:1.6;
+
+    color:#ddd;
+}
+
+.finalHeart{
+
+    font-size:80px;
+
+    margin:30px;
+
+    animation:heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    15%{
+        transform:scale(1.2);
+    }
+
+    30%{
+        transform:scale(1);
+    }
+
+    45%{
+        transform:scale(1.15);
+    }
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    pointer-events:none;
+
+    z-index:100;
+
+    animation:
+    floatHeart 6s linear forwards;
+}
+
+@keyframes floatHeart{
+
+    to{
+
+        transform:
+        translateY(-110vh)
+        rotate(360deg);
+
+        opacity:0;
+    }
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.94);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:5000;
+
+    padding:20px;
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:90vh;
+
+    border-radius:12px;
+}
+
+#close{
+
+    position:absolute;
+
+    right:30px;
+
+    top:20px;
+
+    font-size:40px;
+
+    cursor:pointer;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#555;
+
+    font-size:11px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    section{
+        padding:75px 5%;
+    }
+
+    .passwordBox{
+        flex-direction:column;
+    }
+
+    .unlockBtn{
+        width:100%;
+    }
+
+    .photoFrame img{
+        height:420px;
+    }
+
+    .gallery{
+        columns:2 130px;
+    }
+
+    .reasons{
+        grid-template-columns:1fr;
+    }
+
+    .letter{
+        padding:40px 25px;
+    }
+
+    .letter p{
+        font-size:22px;
+    }
+
+    .timeline::before{
+        left:8px;
+    }
+
+    .timelineItem,
+    .timelineItem:nth-child(even){
+
+        width:100%;
+
+        margin-left:0;
+
+        padding-left:35px;
+
+        text-align:left;
+    }
+
+    .timelineItem:nth-child(odd)
+    .timelineDot,
+    .timelineItem:nth-child(even)
+    .timelineDot{
+
+        left:2px;
+
+        right:auto;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =================================
+     STARS
+================================= -->
+
+<div id="stars"></div>
+
+
+<!-- =================================
+     PASSWORD / CODE WORD
+================================= -->
+
+<div id="lockScreen">
+
+    <div class="lockBox">
+
+        <div class="lockEmoji">
+            🔐
+        </div>
+
+        <div class="lockSmall">
+            This little world is private
+        </div>
+
+        <div class="lockTitle">
+            For Our Alagii
+        </div>
+
+        <p class="lockText">
+
+            You know how you never do anything
+            until you say your special code word? 👀
+
+            <br><br>
+
+            So obviously...
+
+            <br>
+
+            this website has one too. 😂❤️
+
+        </p>
+
+        <div class="passwordBox">
+
+            <input
+                id="password"
+                type="text"
+                placeholder="Enter your code word..."
+                autocomplete="off"
+            >
+
+            <button
+                class="unlockBtn"
+                onclick="unlock()"
+            >
+                Unlock ❤️
+            </button>
+
+        </div>
+
+        <div id="error"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="hero">
+
+    <div class="heroContent">
+
+        <div class="heroMini">
+            Okay Alagii... you made it in.
+        </div>
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+        <div class="heroSubtitle">
+
+            To the girl who can turn an ordinary hostel day
+            into an extraordinary one.
+
+            <br>
+
+            To our Alagii. ❤️
+
+        </div>
+
+        <div class="scrollText">
+            ↓ DON'T RUSH THIS ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     PERSONAL INTRO
+================================= -->
+
+<section>
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            One year. One room. So many memories.
+        </div>
+
+        <h2>
+            Where It All Happened
+        </h2>
+
+    </div>
+
+    <div class="secretMessage">
+
+        We came into the hostel as roommates...
+
+        <br>
+
+        and somehow, one year later,
+
+        <br>
+
+        you became so much more than just a roommate.
+
+        <br><br>
+
+        You became one of those people
+        whose presence makes a normal day
+        feel special.
+
+        ❤️
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     HER PHOTO
+================================= -->
+
+<section>
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            Our birthday girl
+        </div>
+
+        <h2>
+            Look At You, Alagii
+        </h2>
+
+        <p>
+            Seriously... how are you this pretty? 😭
+        </p>
+
+    </div>
+
+    <div class="mainPhoto">
+
+        <div class="photoFrame">
+
+            <img
+                src="photos/1.jpeg"
+                alt="Alagii"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     ROOMMATE MESSAGE
+================================= -->
+
+<section>
+
+    <div class="roommate">
+
+        <h3>
+            One Year With You...
+        </h3>
+
+        <p>
+
+            Living with you for one year taught us something.
+
+            <br><br>
+
+            You don't actually need a plan to have fun.
+
+            You don't need some huge event.
+
+            You don't even need anything special.
+
+            <br><br>
+
+            <strong>
+            Nee kooda irundhaaley engalukku jolly-yum fun-ah-vum irukkum.
+            </strong>
+
+            <br><br>
+
+            Your presence itself changes the whole vibe.
+
+            <br><br>
+
+            And honestly...
+
+            your mokka comedy-ku
+
+            <strong>
+            naanga adimai.
+            </strong>
+
+            😂❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     MEMORIES
+================================= -->
+
+<section>
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            10 little pieces of our year
+        </div>
+
+        <h2>
+            Memories With Alagii
+        </h2>
+
+        <p>
+            Don't ask us to choose a favourite.
+            You being with us is already our favourite.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <div class="memory">
+
+            <img src="photos/2.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    It started with a room...
+                </h4>
+
+                <p>
+                    And became a collection of memories.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/3.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    The random moments ❤️
+                </h4>
+
+                <p>
+                    Somehow always the best ones.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/4.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    Our daily entertainment 😂
+                </h4>
+
+                <p>
+                    Courtesy: Alagii's mokka comedy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/5.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    Ordinary day?
+                </h4>
+
+                <p>
+                    Not when you're around.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/6.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    One for the memory box.
+                </h4>
+
+                <p>
+                    Priceless.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/7.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    Just us being us.
+                </h4>
+
+                <p>
+                    Nothing fancy. Everything special.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/8.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    A little happiness.
+                </h4>
+
+                <p>
+                    One of many.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/9.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    The kind of moment
+                </h4>
+
+                <p>
+                    We wish we could pause forever.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photos/10.jpeg">
+
+            <div class="memoryCaption">
+
+                <h4>
+                    One year later...
+                </h4>
+
+                <p>
+                    Still grateful for you. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     SONGS
+================================= -->
+
+<section class="musicSection">
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            Okay... now listen.
+        </div>
+
+        <h2>
+            Three Songs For You
+        </h2>
+
+        <p>
+            Click each one. Don't just look at them. ❤️
+        </p>
+
+    </div>
+
+
+    <div class="musicBox">
+
+
+        <div class="song">
+
+            <div class="songNumber">
+                01
+            </div>
+
+            <div class="songInfo">
+
+                <h4>
+                    Our First Song ❤️
+                </h4>
+
+                <p>
+                    This one belongs to a memory.
+                </p>
+
+            </div>
+
+            <button
+                class="playBtn"
+                onclick="playSong(0)"
+            >
+                ▶
+            </button>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="songNumber">
+                02
+            </div>
+
+            <div class="songInfo">
+
+                <h4>
+                    For Alagii 🌙
+                </h4>
+
+                <p>
+                    Because some songs just feel like you.
+                </p>
+
+            </div>
+
+            <button
+                class="playBtn"
+                onclick="playSong(1)"
+            >
+                ▶
+            </button>
+
+        </div>
+
+
+        <div class="song">
+
+            <div class="songNumber">
+                03
+            </div>
+
+            <div class="songInfo">
+
+                <h4>
+                    Keep This One 💗
+                </h4>
+
+                <p>
+                    For a day when you need a little reminder.
+                </p>
+
+            </div>
+
+            <button
+                class="playBtn"
+                onclick="playSong(2)"
+            >
+                ▶
+            </button>
+
+        </div>
+
+
+        <div
+            class="nowPlaying"
+            id="nowPlaying"
+        >
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     WHY WE LOVE HER
+================================= -->
+
+<section>
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            Things we probably don't say enough
+        </div>
+
+        <h2>
+            Why We Love Our Alagii
+        </h2>
+
+    </div>
+
+
+    <div class="reasons">
+
+
+        <div class="reason">
+
+            <div class="reasonIcon">
+                🌷
+            </div>
+
+            <h3>
+                Your Kindness
+            </h3>
+
+            <p>
+
+                You're always there for everyone.
+
+                You support people,
+                you care,
+                and you somehow make people feel better
+                without even trying.
+
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reasonIcon">
+                🫶
+            </div>
+
+            <h3>
+                Your Heart
+            </h3>
+
+            <p>
+
+                The way you care about people
+                is something we genuinely love about you.
+
+                Your heart is one of the most beautiful things about you.
+
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reasonIcon">
+                ✨
+            </div>
+
+            <h3>
+                Your Smile
+            </h3>
+
+            <p>
+
+                Your smile has this weird little superpower.
+
+                Somehow,
+                the whole mood gets better.
+
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reasonIcon">
+                😂
+            </div>
+
+            <h3>
+                Your Mokka Comedy
+            </h3>
+
+            <p>
+
+                Should we even explain this?
+
+                No.
+
+                Because nee mokka comedy-ku
+                naanga already adimai.
+
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reasonIcon">
+                ❤️
+            </div>
+
+            <h3>
+                Your Care
+            </h3>
+
+            <p>
+
+                Through every situation,
+                you've been there with us.
+
+                And that means more than you know.
+
+            </p>
+
+        </div>
+
+
+        <div class="reason">
+
+            <div class="reasonIcon">
+                🌙
+            </div>
+
+            <h3>
+                Simply You
+            </h3>
+
+            <p>
+
+                No special reason.
+
+                We just love having you around.
+
+                That's enough.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     TIMELINE
+================================= -->
+
+<section>
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            One year of us
+        </div>
+
+        <h2>
+            Our Little Story
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timelineItem">
+
+            <div class="timelineDot"></div>
+
+            <div class="timelineCard">
+
+                <h3>
+                    We Became Roommates
+                </h3>
+
+                <p>
+
+                    At first,
+                    it was just a room.
+
+                    <br>
+
+                    We didn't know that room would
+                    become the place where so many
+                    memories would happen.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timelineItem">
+
+            <div class="timelineDot"></div>
+
+            <div class="timelineCard">
+
+                <h3>
+                    Then Came The Chaos 😂
+                </h3>
+
+                <p>
+
+                    Random conversations.
+
+                    Random laughter.
+
+                    Random mokka jokes.
+
+                    And somehow,
+                    we loved every second of it.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timelineItem">
+
+            <div class="timelineDot"></div>
+
+            <div class="timelineCard">
+
+                <h3>
+                    You Became Our Person
+                </h3>
+
+                <p>
+
+                    Somewhere along the way,
+                    you stopped being
+                    "our roommate"
+
+                    and became
+
+                    "our Alagii."
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timelineItem">
+
+            <div class="timelineDot"></div>
+
+            <div class="timelineCard">
+
+                <h3>
+                    Today ❤️
+                </h3>
+
+                <p>
+
+                    One whole year.
+
+                    Hundreds of little moments.
+
+                    Countless laughs.
+
+                    And one birthday website
+                    made just for you.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     LETTER
+================================= -->
+
+<section>
+
+    <div class="sectionTitle">
+
+        <div class="small">
+            Okay... this part is serious.
+        </div>
+
+        <h2>
+            Things We Want You To Know
+        </h2>
+
+    </div>
+
+
+    <div class="letterWrap">
+
+        <div class="letter">
+
+            <h3>
+                Dear Alagii,
+            </h3>
+
+
+            <p>
+
+                One year.
+
+                That's all it has been.
+
+                But somehow,
+                it feels like you've been a part
+                of our lives for much longer.
+
+            </p>
+
+
+            <p>
+
+                We don't know if we ever properly told you this...
+
+                but having you with us
+                made hostel life so much better.
+
+            </p>
+
+
+            <p>
+
+                You have this beautiful way of making
+                an ordinary day feel extraordinary.
+
+                Sometimes nothing special would happen.
+
+                We would just be sitting together,
+                talking nonsense,
+                laughing at something stupid...
+
+                and somehow those became
+                some of our favourite moments.
+
+            </p>
+
+
+            <p>
+
+                We love your smile.
+
+                We love your kindness.
+
+                We love the way you care.
+
+                We love your heart.
+
+                We love your soul.
+
+                And yes...
+
+                we even love your mokka comedy. 😂
+
+            </p>
+
+
+            <p>
+
+                But more than anything,
+                we're grateful.
+
+                Because through different situations,
+                you were there with us.
+
+                You supported us.
+
+                You cared about us.
+
+                You never made us feel alone.
+
+            </p>
+
+
+            <p>
+
+                And if there is one thing
+                we want you to remember today...
+
+                it's this:
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                You don't have to do anything special
+                to be important to us.
+
+                Your presence itself is enough.
+
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                So whenever you look back at this year,
+                we hope you don't just remember the photos.
+
+                Remember the laughter.
+
+                Remember the random conversations.
+
+                Remember the nights.
+
+                Remember the silly moments.
+
+                Remember that little room
+                where an ordinary year
+                became something unforgettable.
+
+            </p>
+
+
+            <p>
+
+                Happy Birthday, Alagii.
+
+                ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     FINAL EMOTIONAL SECTION
+================================= -->
+
+<section class="finalSection">
+
+    <div class="finalContent">
+
+        <div class="finalSmall">
+            ONE LAST THING...
+        </div>
+
+
+        <h2>
+            If Life Changes...
+        </h2>
+
+
+        <div class="finalText">
+
+            Maybe someday...
+
+            <br>
+
+            hostel life will end.
+
+            <br>
+
+            We'll have different rooms.
+
+            <br>
+
+            Different routines.
+
+            <br>
+
+            Different places.
+
+            <br>
+
+            Maybe even different cities.
+
+            <br><br>
+
+
+            But if that day comes...
+
+            <br><br>
+
+
+            please don't ever think
+            that these memories became less important.
+
+            <br><br>
+
+
+            Because somewhere in our lives,
+            there will always be this one year...
+
+            <br>
+
+            where we shared a room,
+
+            <br>
+
+            shared our nonsense,
+
+            <br>
+
+            laughed at absolutely stupid things,
+
+            <br>
+
+            and somehow made
+            ordinary days extraordinary.
+
+            <br><br>
+
+
+            And if you ever forget
+            how special you are...
+
+            <br><br>
+
+
+            come back to this page.
+
+            ❤️
+
+        </div>
+
+
+        <div class="finalHeart">
+            ❤️
+        </div>
+
+
+        <h2>
+            Happy Birthday,
+            <br>
+            Our Alagii.
+        </h2>
+
+
+        <div class="finalText">
+
+            Thank you for being
+            one of the most beautiful
+            parts of our hostel life.
+
+            <br><br>
+
+            We love you. ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made by your favourite people
+    for our favourite Alagii ❤️
+
+    <br><br>
+
+    1 year.
+    1000 memories.
+    One unforgettable friendship.
+
+</footer>
+
+
+<!-- =================================
+     LIGHTBOX
+================================= -->
+
+<div id="lightbox">
+
+    <div id="close">
+        ×
+    </div>
+
+    <img id="lightboxImage">
+
+</div>
+
+
+<script>
+
+/* =================================
+   CREATE STARS
+================================= */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+    const star =
+    document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+    Math.random()*100+"%";
+
+    star.style.top =
+    Math.random()*100+"%";
+
+    star.style.animationDelay =
+    Math.random()*3+"s";
+
+    stars.appendChild(star);
+}
+
+
+/* =================================
+   CODE WORD
+================================= */
+
+const correctPassword =
+"Alaga irukka harshini";
+
+const passwordInput =
+document.getElementById("password");
+
+passwordInput.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key==="Enter"){
+
+            unlock();
+
+        }
+
+    }
+);
+
+
+function unlock(){
+
+    const entered =
+    passwordInput.value.trim();
+
+    const error =
+    document.getElementById("error");
+
+    if(entered === correctPassword){
+
+        error.innerHTML =
+        "Correct... ❤️";
+
+        setTimeout(()=>{
+
+            const lock =
+            document.getElementById("lockScreen");
+
+            lock.style.opacity="0";
+
+            setTimeout(()=>{
+
+                lock.style.display="none";
+
+                startHearts();
+
+            },1000);
+
+        },500);
+
+    }
+
+    else{
+
+        error.innerHTML =
+        "Adei 😭 wrong code word... try again!";
+
+        passwordInput.value="";
+
+        passwordInput.focus();
+
+    }
+
+}
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+function createHeart(){
+
+    const heart =
+    document.createElement("div");
+
+    heart.className="heart";
+
+    const heartList=[
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💘",
+        "💞"
+    ];
+
+    heart.innerHTML =
+    heartList[
+        Math.floor(
+            Math.random()*heartList.length
+        )
+    ];
+
+    heart.style.left =
+    Math.random()*100+"%";
+
+    heart.style.fontSize =
+    (14+Math.random()*20)+"px";
+
+    heart.style.animationDuration =
+    (4+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },8000);
+
+}
+
+function startHearts(){
+
+    setInterval(
+        createHeart,
+        900
+    );
+
+}
+
+
+/* =================================
+   SONGS
+================================= */
+
+const songs=[
+
+    new Audio("songs/song1.mpeg"),
+
+    new Audio("songs/song2.mpeg"),
+
+    new Audio("songs/song3.mpeg")
+
+];
+
+const songNames=[
+
+    "Our First Song ❤️",
+
+    "For Alagii 🌙",
+
+    "Keep This One 💗"
+
+];
+
+let currentSong=null;
+
+
+function playSong(index){
+
+    if(currentSong){
+
+        currentSong.pause();
+
+        currentSong.currentTime=0;
+
+    }
+
+    currentSong =
+    songs[index];
+
+    currentSong.play();
+
+    document.getElementById(
+        "nowPlaying"
+    ).innerHTML =
+    "🎵 Now playing: "+
+    songNames[index];
+
+    createMusicHearts();
+
+}
+
+
+function createMusicHearts(){
+
+    for(let i=0;i<12;i++){
+
+        setTimeout(
+            createHeart,
+            i*150
+        );
+
+    }
+
+}
+
+
+/* =================================
+   PHOTO LIGHTBOX
+================================= */
+
+const images =
+document.querySelectorAll(".memory img");
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+images.forEach(img=>{
+
+    img.addEventListener(
+        "click",
+        ()=>{
+
+            lightbox.style.display="flex";
+
+            lightboxImage.src =
+            img.src;
+
+        }
+    );
+
+});
+
+
+document.getElementById(
+    "close"
+).addEventListener(
+    "click",
+    ()=>{
+
+        lightbox.style.display="none";
+
+    }
+);
+
+
+lightbox.addEventListener(
+    "click",
+    event=>{
+
+        if(event.target===lightbox){
+
+            lightbox.style.display="none";
+
+        }
+
+    }
+);
+
+
+/* =================================
+   SCROLL ANIMATION
+================================= */
+
+const observer =
+new IntersectionObserver(
+
+    entries=>{
+
+        entries.forEach(
+            entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target.style.opacity="1";
+
+                    entry.target.style.transform=
+                    "translateY(0)";
+
+                }
+
+            }
+        );
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+document.querySelectorAll(
+
+    ".sectionTitle,"+
+    ".secretMessage,"+
+    ".photoFrame,"+
+    ".roommate,"+
+    ".memory,"+
+    ".song,"+
+    ".reason,"+
+    ".timelineItem,"+
+    ".letter"
+
+).forEach(element=>{
+
+    element.style.opacity="0";
+
+    element.style.transform=
+    "translateY(35px)";
+
+    element.style.transition=
+    "opacity 1s ease, transform 1s ease";
+
+    observer.observe(element);
+
+});
+
+
+/* =================================
+   FINAL HEART EXPLOSION
+================================= */
+
+const finalSection =
+document.querySelector(".finalSection");
+
+
+const finalObserver =
+new IntersectionObserver(
+
+    entries=>{
+
+        if(entries[0].isIntersecting){
+
+            for(let i=0;i<35;i++){
+
+                setTimeout(
+                    createHeart,
+                    i*100
+                );
+
+            }
+
+        }
+
+    },
+
+    {
+        threshold:.35
+    }
+
+);
+
+
+finalObserver.observe(finalSection);
+
+
+/* =================================
+   EXTRA: DOUBLE CLICK HEART
+================================= */
+
+document.addEventListener(
+    "dblclick",
+    event=>{
+
+        const heart =
+        document.createElement("div");
+
+        heart.innerHTML="❤️";
+
+        heart.style.position="fixed";
+
+        heart.style.left=
+        event.clientX+"px";
+
+        heart.style.top=
+        event.clientY+"px";
+
+        heart.style.fontSize="35px";
+
+        heart.style.pointerEvents="none";
+
+        heart.style.zIndex="9999";
+
+        heart.style.animation=
+        "floatHeart 2s linear forwards";
+
+        document.body.appendChild(heart);
+
+        setTimeout(
+            ()=>heart.remove(),
+            2000
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+```
